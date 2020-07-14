@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<!-- Mirrored from faxes.zone/docs/aceperms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 21:08:49 GMT -->
+<head>
+    <title>FAXES Wiki - Ace Permissions</title>
+    <!-- Meta -->
+    <meta name="description" content="The General Wiki For FAXES' Ace Permissions For All My Scripts">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.png">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index-2.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">faxes</span><span class="text-bold">wiki</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index-2.html">Home</a></li>
+                    <li class="active">Ace Permissions</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon fa fa-book"></span> Ace Permissions Wiki</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: November 14th, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="intro" class="doc-section">
+                                <h2 class="section-title">Introduction</h2>
+                                <div class="section-block">
+                                    <div class="answer">This Wiki has all my scripts ace permissions and setting them up. Use the sidebar and find the script of which your trying to set Ace Permissions up for.</div>
+                                    <br />
+                                    <div class="answer">Need further support? Join my Discord <a href="../discord/index.html">here</a>.</div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="aop" class="doc-section">
+                                <h2 class="section-title">Area of Patrol (AOP)</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace Fax.AOP faxes.aopcmds allow
+
+add_principal identifier.steam:HEX-ID-HERE Fax.AOP</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="svr" class="doc-section">
+                                <h2 class="section-title">Server Notification</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace group.admin fax allow               # allow all commands for FAXES Script admins 
+add_ace group.moderator fax allow           # allow all commands for FAXES Script moderators
+add_ace group.moderator fax.cmds deny	    # disallow FAXES Script Perms for moderators
+
+add_principal identifier.steam:HEX-ID-HERE group.admin</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="spass" class="doc-section">
+                                <h2 class="section-title">Server Password</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace Fax.Bypass Bypass allow
+
+add_principal identifier.steam:HEX-ID-HERE Fax.Bypass
+</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="vote2kick" class="doc-section">
+                                <h2 class="section-title">Vote to Kick</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace Fax.VTKBypass VTKBypass allow
+
+add_principal identifier.steam:HEX-ID-HERE Fax.VTKBypass
+</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="troll" class="doc-section">
+                                <h2 class="section-title">Troll Script</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace Fax.FTroll FTroll allow
+
+add_principal identifier.steam:HEX-ID-HERE Fax.FTroll
+</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="adarea" class="doc-section">
+                                <h2 class="section-title">Admin Area</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace Fax.Admin fax.admin allow
+
+add_principal identifier.steam:1100001142BFEA4 Fax.Admin
+</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="nospeaky" class="doc-section">
+                                <h2 class="section-title">No Speaky</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Simply copy and pate the below into your server.cfg and replace the <code>HEX-ID-HERE</code> with your steam hexadecimal. A hexadecimal looks like this; <code>110000000000000</code>(With different characters).</div>
+
+                                    <pre><code class="language-git">add_ace FaxNS.NoSpeaky FaxNoSpeaky allow
+add_principal identifier.steam:HEX_ID_HERE FaxNS.NoSpeaky
+</code>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="faxcore" class="doc-section">
+                                <h2 class="section-title">Fax Core</h2>
+                                <div class="section-block">
+                                    <div class="answer"> Fax Core has it's own wiki. Please visit it <a href="faxcore.html">here</a></div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+
+
+                        
+                                                        
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu hidden-xs" data-spy="affix">
+                                <li><a class="scrollto" href="#intro">Introduction</a></li>
+                                <li><a class="scrollto" href="#aop">Area of Patrol (AOP)</a></li>
+                                <li><a class="scrollto" href="#svr">Server Notification</a></li>
+                                <li><a class="scrollto" href="#spass">Server Password</a></li>
+                                <li><a class="scrollto" href="#vote2kick">Vote to Kick</a></li>
+                                <li><a class="scrollto" href="#troll">Troll Script</a></li>
+                                <li><a class="scrollto" href="#adarea">Admin Area</a></li>
+                                <li><a class="scrollto" href="#nospeaky">No Speaky</a></li>
+                                <li><a class="scrollto" href="#faxcore">Fax Core</a></li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">© 2018 Fraffel Media - https://fraffel.tech/terms | Hosted by <a href="http://fraffel.tech/" target="_blank">Fraffel Media</a></small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+
+<!-- Mirrored from faxes.zone/docs/aceperms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 21:08:49 GMT -->
+</html> 
+

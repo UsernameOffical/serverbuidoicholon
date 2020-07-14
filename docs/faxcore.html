@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<!-- Mirrored from faxes.zone/docs/faxcore.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 21:08:47 GMT -->
+<head>
+    <title>FAXES Wiki - Fax Core</title>
+    <!-- Meta -->
+    <meta name="description" content="The General Wiki for Fax-Core [FiveM Script].">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.png">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index-2.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">faxes</span><span class="text-bold">wiki</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index-2.html">Home</a></li>
+                    <li class="active">Fax Core</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon fa fa-code"></span> Fax Core</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: July 16th, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="about" class="doc-section">
+                                <h2 class="section-title">About</h2>
+                                <div class="section-block">
+                                    <div class="answer">Today I present to you a new script that is so diverse and unique, it's one of a kind. This is Fax-Core, a permission system to blacklist certain groups from things from vehicles to ped models, and it all uses Ace permissions. Yes no database, no editing tons of files to add groups etc. With Fax Core you have 3 administration and 4 user ranks, each with their own set of permissions (all groups are outlined below). With the base of Fax Core you can whitelist; vehicles, peds and weapons for specific groups. Eg: Senior admins can not use the owner vehicle but people with the owner permission can. Below is a list of features and videos on setting up and a highlight video.</div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="features" class="doc-section">
+                                <h2 class="section-title">Features</h2>
+                                <div class="section-block">
+                                    <div class="answer">
+                                        <p> - Ace Based permission system<br />
+                                            - Blacklist vehicles<br />
+                                            - Blacklist ped models<br />
+                                            - Blacklist weapons<br />
+                                            - 7 user groups, each for different perms<br />
+                                            - Option to make external resources that use Fax-Core's permission system<br />
+                                            - Configurable with...<br />
+                                            - Config file for easy moderation / set-up<br />
+                                            - Alerts for version checking<br />
+                                            - Alerts to make sure perms are set up<br />
+                                            - Lots of documentation, so don't ask if you have not read <br />
+                                            - Made with ❤️<br /></p>
+                                    </div><!--//anwser-->
+                            </section>  
+                            <section id="ranks" class="doc-section">
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="fa fa-question-circle"></i> Rank Table</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Ace Name</th>
+                                                        <th>Perm Lvl Num</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Owner</td>
+                                                        <td>Fax.owner</td>
+                                                        <td>6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Senior Admin</td>
+                                                        <td>Fax.snradmin</td>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Admin</td>
+                                                        <td>Fax.fadmin</td>
+                                                        <td>4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Member 3</td>
+                                                        <td>Fax.member3</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Member 2</td>
+                                                        <td>Fax.member2</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Member 1</td>
+                                                        <td>Fax.member1</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Guest</td>
+                                                        <td>N/A</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p><small>* Guest does not have an ace, the script auto assigns it is no ace is specified for a client</small></p>
+                                        </div><!--//table-responsive-->
+                                    </div><!--//section-block-->
+                                </section>
+
+                                <section id="download" class="doc-section">
+                                    <h2 class="section-title">Download</h2>
+                                    <div class="section-block">
+                                            <h6>Downloads</h6>
+                                            <ul class="list list-unstyled">
+                                                <li><a href="../scripts/fax-core.html" class="btn btn-primary btn-cta"><i class="fa fa-download"></i> Download</a></li>
+                                                <li><a href="https://github.com/FAXES/Fax-Core" class="btn btn-green btn-cta"><i class="fa fa-code-fork"></i> Github</a></li>
+                                            </ul>
+                                    </div><!--//section-block-->
+                                </section><!--//doc-section-->
+
+                                <section id="videos" class="doc-section">
+                                    <h2 class="section-title">Videos</h2>
+                                    <div class="section-block">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <h6>Installation & Setup</h6>
+                                                <!-- 16:9 aspect ratio -->
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RetOUszaje4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <h6>Resource Highlight : Fax Core</h6>
+                                                <!-- 4:3 aspect ratio -->
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K64cwCoiRxk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div><!--//row-->
+                                    </div><!--//section-block-->
+                                </section>
+                                    
+                            
+                            <section id="setup" class="doc-section">
+                                <h2 class="section-title">Installation & Setup</h2>
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> Step 1 : Downloading</h3>
+                                    <div class="answer">Download Fax Core and have the .rar file ready for use.</div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> Step 2 : Installing The Resource</h3>
+                                    <div class="answer">Install the resource as if it was a normal one. Look <a href="https://forum.fivem.net/t/how-to-install-a-fivem-resource-script/81013">here</a> for a guide on doing this.</div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> Step 3 : Installing perms.cfg</h3>
+                                    <div class="answer">place the <code>perms.cfg</code> into your server-data folder where your <code>server.cfg</code> is contained. This file has all the ace permissions for the script to function. In your <code>server.cfg</code> add the following line into it: <code>exec perms.cfg</code> DO NOT add <code>start Fax-Core</code> into your server.cfg, it's in the perms.cfg.</div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> Step 4 : Starting the Server</h3>
+                                    <div class="answer">Start your server. If you get any errors in the server console please READ IT and follow through with the above steps. Your perms.cfg should look like the below by default.</div>
+                                    <pre><code class="language-git">
+### Fax Core Permissions config, made by FAXES ###
+
+### Do not touch this section
+set Fax-Core true
+start Fax-Core
+
+### This sets the groups DO NOT TOUCH ###
+add_ace Fax.owner owner allow	                            		    # sets ace permission for owners
+add_ace Fax.snradmin snradmin allow	                            		# sets ace permission for snradmins
+add_ace Fax.fadmin fadmin allow	                                    	# sets ace permission for admins
+add_ace Fax.member3 member3 allow	                            		# sets ace permission for member3
+add_ace Fax.member2 member2 allow	                            		# sets ace permission for member2
+add_ace Fax.member1 member1 allow	                            		# sets ace permission for member1
+
+### Start editing below, Don't have the same ID in 2 groups.
+### Add People to Owner
+add_principal identifier.steam:110000000000000 Fax.owner             	# add to the owner group
+add_principal identifier.steam:110000000000000 Fax.owner                # add to the owner group
+
+### Add People to Senior Admin
+add_principal identifier.steam:110000000000000 Fax.snradmin             # add to the senior admin group
+add_principal identifier.steam:110000000000000 Fax.snradmin            	# add to the senior admin group
+
+### Add People to Admin
+add_principal identifier.steam:110000000000000 Fax.fadmin               # add to the admin group
+add_principal identifier.steam:110000000000000 Fax.fadmin               # add to the admin group
+
+### Add People to Member 3
+add_principal identifier.steam:110000000000000 Fax.member3              # add to the member 3 group
+add_principal identifier.steam:110000000000000 Fax.member3              # add to the member 3 group
+
+### Add People to Member 2
+add_principal identifier.steam:110000000000000 Fax.member2              # add to the member 2 group
+add_principal identifier.steam:110000000000000 Fax.member2              # add to the member 2 group
+
+### Add People to Member 1
+add_principal identifier.steam:110000000000000 Fax.member1              # add to the member 1 group
+add_principal identifier.steam:110000000000000 Fax.member1              # add to the member 1 group
+                                    </code></pre>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="info" class="doc-section">
+                                <h2 class="section-title">Additional Information</h2>
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> Adding Users to Permissions</h3>
+                                    <div class="answer"> To add users to your permissions place the Steam Hex ID in the perms.cfg replacing the fake ID's that are there. <code>add_principal identifier.steam:1100001142BFEB2 Fax.owner</code> - This adds someone to the owner rank.</div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa fa-question-circle"></i> How to Add Blacklisted Items</h3>
+                                    <div class="answer">To add blacklisted vehicles, peds and weapons in the resource itself view config.lua. In there is a commented out section read it! and add whatever into your area, make sure it's formatted correctly. There is no need to ever edit any files in the resource except the config.lua!</div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                                                        
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu hidden-xs" data-spy="affix">
+                                <li><a class="scrollto" href="#about">About</a></li>
+                                <li><a class="scrollto" href="#features">Features</a></li>
+                                <li><a class="scrollto" href="#ranks">Rank Table</a></li>
+                                <li><a class="scrollto" href="#download">Downloads</a></li>
+                                <li><a class="scrollto" href="#videos">Videos</a></li>
+                                <li><a class="scrollto" href="#setup">Installation & Setup</a></li>
+                                <li><a class="scrollto" href="#info">Additional Information</a></li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">© 2018 Fraffel Media - https://fraffel.tech/terms | Hosted by <a href="http://fraffel.tech/" target="_blank">Fraffel Media</a></small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+
+<!-- Mirrored from faxes.zone/docs/faxcore.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 21:08:49 GMT -->
+</html> 
+
